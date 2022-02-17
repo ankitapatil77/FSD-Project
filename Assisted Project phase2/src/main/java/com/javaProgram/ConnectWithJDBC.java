@@ -2,6 +2,7 @@ package com.javaProgram;
 
 import java.sql.Connection;
 
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ConnectWithJDBC {
-	public static final String URLTOCONNECT = "jdbc:mysql://localhost:3306/product";
+	public static final String URLTOCONNECT = "jdbc:mysql://localhost:3306/administretive_portal";
 
 
     public static final String USERNAME = "root";

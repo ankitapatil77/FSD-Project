@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class and style binding</title>
+</head>
+<style>
+    .inStock{
+   background: #096d09;
+   color:#ffff;
+   Font-size:15px;
+}
+
+</style>
+<body>
+    <button [attr.disabled]=”true” class="btn btn-primary" (click)='toggleImage()'>
+        Show Image
+    </button>
+
+    <td [class.inStock]="true">
+        {{ product.price}}
+    </td>
+
+    
+ <td [style.color]="product.price > 20 ? 'red': 'green'"           [style.font-size.px]="16"  [style.font-weight]="700">
+    {{ product.price}}
+</td>
+
+    
+   
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Callback function: JS</title>
+</head>
+<body>
+    <h1>Callback Function..</h1>
+    <script>
+        const empId = (function() {
+    let count = 0;
+    return function() {
+      ++count;
+      return `emp${count}`;
+    };
+  })();
+  
+ console.log("New Emplyee IDs are listed here  ");
+ 
+ console.log("   Alex: "+empId()); 
+
+ console.log("   Dexter: "+empId()); 
+
+ console.log("   Tae: "+empId());
+   
+
+  //Callbacks
+  console.log("\n"); //to start the output from the neext line
+  function fullName(firstName, lastName, callback){
+    console.log("My name is " + firstName + " " + lastName);
+    callback(lastName);
+  }
+  
+  var greeting = function(ln){
+    console.log('Welcome ' + ln);
+  };
+  
+  fullName("Alex", "Wilson", greeting);
+  console.log("\n");
+  fullName("Dexter", "Johnson", greeting);
+  console.log("\n");
+  fullName("Tae", "Butler", greeting);
+
+    </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 package com.javaProgram;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
@@ -17,8 +18,9 @@ public class GetHandler extends HttpServlet {
         
 		System.out.println("inside doGet() ");
 		
-		//set content type of response
-		response.setContentType("text/html");
+		
+		
+
 		
 		//get a reference to printWriter
 		PrintWriter out=response.getWriter();
