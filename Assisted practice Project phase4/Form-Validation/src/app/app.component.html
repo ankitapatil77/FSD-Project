@@ -1,0 +1,19 @@
+<div>
+    <h2>
+      Form validation
+    </h2>
+    <form [formGroup]="requiredForm" novalidate style="font-size: 30px;">
+          <div class="form-group">
+            <label class="center-block">Name:
+              <input class="form-control" formControlName="name">
+            </label>
+          </div>
+          <div *ngIf="requiredForm.controls['name'].invalid && requiredForm.controls['name'].touched" class="alert alert-danger" style="font-size: 30px;">
+              <div *ngIf="requiredForm.controls['name']">
+              Name is required.
+            </div>
+          </div>
+    </form>
+  <p style="font-size: 30px;">Form value: {{ requiredForm.value | json }}</p>
+  <p style="font-size: 30px;">Form status: {{ requiredForm.status | json }}</p>
+  </div>
